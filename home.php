@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
     <!--[if IE]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -38,6 +40,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
+       
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -53,8 +56,8 @@
             <li><a href="#">Dummy 2</a></li>
             <li><a href="#">Dummy 3</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            
+          
+          <ul class="nav navbar-nav navbar-right">            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			  <span class="glyphicon glyphicon-user"></span>&nbsp;Hallo <?php echo $userRow['username']; ?>&nbsp;<span class="caret"></span></a>
@@ -64,12 +67,12 @@
               </ul>
             </li>
           </ul>
+          
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
     	
     
 <div class="container-fluid" style="margin-top:80px;">
