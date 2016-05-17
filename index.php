@@ -38,6 +38,8 @@ if(!empty($_POST))
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="style.css">
+
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
 
     <!--[if IE]>
@@ -47,15 +49,12 @@ if(!empty($_POST))
 </head>
 
 <body>
-
-<div class="signin-form">
-
-	<div class="container">
-     
-        
+<div class="logo"></div>
+	<div class="container klein">
+          
        <form class="form-signin" method="post" id="login-form">
       
-        <h2 class="form-signin-heading">Aanmelden</h2><hr />
+        <h2 class="form-signin-heading">Aanmelden</h2>
         
         <div id="error">
         <?php
@@ -79,11 +78,10 @@ if(!empty($_POST))
         <input type="password" class="form-control" name="password" placeholder="Wachtwoord" />
         </div>
        
-     	<hr />
         
-        <div class="form-group">
+        <div class="form-group center">
             <button type="submit" name="btn-login" class="btn btn-default">
-                	<i class="glyphicon glyphicon-log-in"></i> &nbsp; Aanmelden
+            AANMELDEN
             </button>
         </div>  
       	<br />
@@ -91,8 +89,7 @@ if(!empty($_POST))
       </form>
 
     </div>
-    
-</div>
+<div class="site-footer center">Copyright Extra TimeLine</div>
 
 </body>
 </html>

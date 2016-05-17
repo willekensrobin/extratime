@@ -71,6 +71,7 @@ if(!empty($_POST))
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
 
     <!--[if IE]>
@@ -83,10 +84,10 @@ if(!empty($_POST))
 
 <div class="signin-form">
 
-<div class="container">
+<div class="container klein">
     	
         <form method="post" class="form-signin">
-            <h2 class="form-signin-heading">Registreren</h2><hr />
+            <h2 class="form-signin-heading">Registreren</h2>
             <?php
 			if(isset($error))
 			{
@@ -117,10 +118,10 @@ if(!empty($_POST))
             <div class="form-group">
             	<input type="password" class="form-control" name="password" placeholder="Wachtwoord" />
             </div>
-            <div class="clearfix"></div><hr />
-            <div class="form-group">
+            <div class="clearfix"></div>
+            <div class="form-group center">
             	<button type="submit" class="btn btn-primary" name="btn-signup">
-                	<i class="glyphicon glyphicon-open-file"></i>&nbsp;Registreren
+                	REGISTREER
                 </button>
             </div>
             <br />
