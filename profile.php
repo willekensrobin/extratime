@@ -76,13 +76,6 @@
 	
     <div class="container">
     
-    	<label class="h5">Welkom, <?php print($userRow['username']); ?></label>
-        <hr />
-        
-        <h1>
-        <a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a> &nbsp; 
-        <a href="profile.php"><span class="glyphicon glyphicon-user"></span> Profiel</a></h1>
-        <hr />
         
         <p class="h4">Profiel pagina</p> 
         
