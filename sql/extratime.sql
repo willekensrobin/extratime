@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.38)
 # Database: extratime
-# Generation Time: 2016-05-17 18:43:23 +0000
+# Generation Time: 2016-05-20 09:06:06 +0000
 # ************************************************************
 
 
@@ -20,6 +20,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+# Dump of table db_game
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `db_game`;
+
+CREATE TABLE `db_game` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `visitors` varchar(255) NOT NULL DEFAULT '',
+  `hometeam` varchar(255) NOT NULL DEFAULT '',
+  `picture` longblob NOT NULL,
+  `picturetwo` longblob NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
 # Dump of table db_user
 # ------------------------------------------------------------
 
@@ -30,20 +47,21 @@ CREATE TABLE `db_user` (
   `username` varchar(255) NOT NULL DEFAULT '',
   `firstname` varchar(255) NOT NULL DEFAULT '',
   `lastname` varchar(255) NOT NULL DEFAULT '',
-  `birthday` int(11) DEFAULT NULL,
-  `birthmonth` int(11) DEFAULT NULL,
-  `birthyear` int(11) DEFAULT NULL,
   `email` varchar(255) NOT NULL DEFAULT '',
   `password` varchar(255) NOT NULL DEFAULT '',
+  `picture` longblob,
+  `type` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `db_user` WRITE;
 /*!40000 ALTER TABLE `db_user` DISABLE KEYS */;
 
-INSERT INTO `db_user` (`id`, `username`, `firstname`, `lastname`, `birthday`, `birthmonth`, `birthyear`, `email`, `password`)
+INSERT INTO `db_user` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `picture`, `type`)
 VALUES
-	(1,'Robin','','',NULL,NULL,NULL,'willekensrobin@hotmail.com','$2y$10$ZvbbBDm1r7qP5ZKdbHsyvu.u/.hddHVrLR9LESTCXz0tAJgu4TUNm');
+	(1,'Robin','','','willekensrobin@hotmail.com','$2y$10$ZvbbBDm1r7qP5ZKdbHsyvu.u/.hddHVrLR9LESTCXz0tAJgu4TUNm',NULL,NULL),
+	(2,'Bobin','','','rillekens@hotmail.be','$2y$10$yVFd2Z/42JrG0hK0CLQ4r.47sGHYqzBHGrdjrcEtxBRT/J85d813O',NULL,NULL),
+	(3,'eeee','','','willekens@hotmal.com','$2y$10$ljGb6N7M/9uNPXKqkBHVE.LHTdcfoMBd2rG1QV/1177re6DaVTw5u',NULL,NULL);
 
 /*!40000 ALTER TABLE `db_user` ENABLE KEYS */;
 UNLOCK TABLES;
