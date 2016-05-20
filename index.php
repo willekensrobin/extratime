@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<div class="logo"></div>
+<div class="logo"> </div>
 	<div class="container klein center">
           
             
