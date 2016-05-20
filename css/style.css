@@ -1,0 +1,168 @@
+body{
+    background-color: #2980b9;
+    color: white;
+}
+html,body{height:100%;}
+.klein{
+    max-width: 600px;
+    margin-top: 25px;
+}
+.center{
+    text-align: center;
+}
+.logo{
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    
+    height: 75px;
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+.containerlogo{
+    height: 100%;
+    padding-bottom: %;
+    padding-top: 15%;
+    padding-left: 16%;
+    padding-right: 16%;
+
+}
+.logoklein{
+    height: 40px;
+}
+
+.logogroot{
+    background: url(../images/logogroot.png) no-repeat center center;
+    height: 90%;
+    display: block;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+}
+.container{
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+
+}
+.container:after {
+  content: "";
+  display: block;
+}
+.site-footer, .container:after {
+  height: 50px; 
+}
+.site-footer {
+font-size: 0.8em;    
+}
+.btn{
+    background: none;
+    border: none;
+    background-color: none;
+    border: 5px solid white;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    color: white;
+}
+.btn:hover{
+    background: none;
+    border: none;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    color: #000080;
+}
+.btn-default{
+    background: none;
+    background-color: none;
+    border: 5px solid white;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+}
+.btn-club{
+    background: none;
+    background-color: none;
+    border: none;
+    color: white;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+    width: 500px;
+    height: 100px;
+    margin-bottom: -17px;
+    padding-top: 10px;
+}
+
+.btn-knop:hover{
+    background: #c0392b;
+    border: none;
+    border-radius: 100%;
+
+    border: 8px solid #c0392b;
+
+}
+.btn-knop{
+    background: #e74c3c;
+    border: none;
+    background-color: none;
+    border: 10px solid #c0392b;
+    border-radius: 100%;
+    text-shadow: none;
+    box-shadow: none;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+.btn-knop:hover{
+    background: #c0392b;
+    border: none;
+    border-radius: 100%;
+
+    border: 8px solid #c0392b;
+
+}
+.light{
+    background-color: #3498db;
+}
+.form-control{
+    border-radius: 0;
+    background: none;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    padding: 1.5em;
+    
+}
+.form-control::-webkit-input-placeholder {
+   color: white;
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+.form-control:-ms-input-placeholder {  
+   color: white;  
+}

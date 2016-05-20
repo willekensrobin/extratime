@@ -31,7 +31,7 @@ class User
 												  
 			$statement->bindparam(":username", $username);
 			$statement->bindparam(":email", $email);
-			$statement->bindparam(":password", $new_password);										  
+			$statement->bindparam(":password", $new_password);
 				
 			$statement->execute();	
 			
@@ -42,8 +42,8 @@ class User
 			echo $e->getMessage();
 		}				
 	}
-	
-	
+
+		
 	public function login($username,$email,$password)
 	{
 		try

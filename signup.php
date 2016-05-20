@@ -14,7 +14,9 @@ if(!empty($_POST))
 {
 	$username = strip_tags($_POST['username']);
 	$email = strip_tags($_POST['email']);
-	$password = strip_tags($_POST['password']);	
+	$password = strip_tags($_POST['password']);
+    $firstname = strip_tags($_POST['firstname']);
+    $lastname = strip_tags($_POST['lastname']);
 	
 	if($username=="")	{
 		$error[] = "Geef een gebruikersnaam in";	
@@ -30,6 +32,12 @@ if(!empty($_POST))
 	}
 	else if(strlen($password) < 6){
 		$error[] = "Wachtwoord moet minstens 6 karakters bevatten";	
+	}
+    else if($firstname=="")	{
+		$error[] = "Geef uw voornaam in";	
+	}
+    else if($lastname=="")	{
+		$error[] = "Geef uw achternaam in";	
 	}
 	else
 	{
@@ -71,7 +79,7 @@ if(!empty($_POST))
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
 
     <!--[if IE]>
@@ -110,6 +118,12 @@ if(!empty($_POST))
 			}
 			?>
             <div class="form-group">
+            <input type="text" class="form-control" name="firstname" placeholder="Voornaam" value="<?php if(isset($error)){echo $firstname;}?>" />
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" name="lastname" placeholder="Achternaam" value="<?php if(isset($error)){echo $lastname;}?>" />
+            </div>
+            <div class="form-group">
             <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam" value="<?php if(isset($error)){echo $username;}?>" />
             </div>
             <div class="form-group">
@@ -117,6 +131,9 @@ if(!empty($_POST))
             </div>
             <div class="form-group">
             	<input type="password" class="form-control" name="password" placeholder="Wachtwoord" />
+            </div>
+            <div class="checkbox">
+            <label><input type="checkbox" value="" name="type">Admin</label>
             </div>
             <div class="clearfix"></div>
             <div class="form-group center">
