@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/menu.css"> 
+
 
     <!--[if IE]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -20,7 +22,13 @@
 </head>
 
 <body>
-<div class="logo"> </div>
+<?php include_once('templates/header.php') ?>
+
+<div id="main">
+  <h2>Sidenav Push Example</h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ open</span>
+    <div class="logo"> </div>
 	<div class="container klein center">
           
             
@@ -30,6 +38,19 @@
 
 
 </div><div class="site-footer center">Copyright Extra TimeLine</div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
 </body>
 </html>
