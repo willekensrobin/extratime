@@ -1,6 +1,8 @@
 body{
-    background-color: #2980b9;
+    background-image: url(../images/test.png);
     color: white;
+    background-position: top center;
+    background-size: cover;
 }
 html,body{height:100%;}
 .klein{
@@ -10,13 +12,20 @@ html,body{height:100%;}
 .center{
     text-align: center;
 }
+.space50{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.bigfont{
+    font-size: 2em;
+}
 .logo{
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-position: top center;
     
-    height: 75px;
-    padding-bottom: 50px;
+    height: 30px;
+    margin-top:   5px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;

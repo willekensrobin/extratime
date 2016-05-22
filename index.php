@@ -11,8 +11,16 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href="css/demo.css" />
+    <link type="text/css" rel="stylesheet" href="dist/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" href="css/style.css"> 
-    <link rel="stylesheet" href="css/menu.css"> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
+    <script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu();
+			});
+    </script>
 
 
     <!--[if IE]>
@@ -22,33 +30,23 @@
 </head>
 
 <body>
-<?php include_once('templates/header.php') ?>
 
-<div id="main">
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
-    <div class="logo"> </div>
-	<div class="container klein center">
-          
-            
-<button name="btn-login" class="btn btn-default"><a href="login.php">AANMELDEN</a></button><br><br>
-<button name="btn-login" class="btn btn-default"><a href="signup.php">REGISTREER</a></button><br><br>
-<button name="btn-login" class="btn btn-default">AANMELDEN MET FACEBOOK</button>
-
-
+<div id="page">
+    <div class="header">
+        <a href="#menu"></a>
+        <div class="logo"></div>
+    </div>
+    <div class="content">
+        <button name="btn-login" class="btn btn-default"><a href="login.php">INLOGGEN</a></button><br><br>
+        <button name="btn-login" class="btn btn-default"><a href="signup.php">AANMELDEN</a></button><br><br>
+    </div>
+			
+    <?php include_once('templates/header.php') ?>
+    
 </div><div class="site-footer center">Copyright Extra TimeLine</div>
-</div>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-
-</body>
+    
+	</body>
 </html>
+
+
+
