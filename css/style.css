@@ -41,6 +41,16 @@ html,body{height:100%;}
 .logoklein{
     height: 40px;
 }
+.circle{
+    width: 5px;
+    height: 5px;
+    background: #e74c3c;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
 
 .logogroot{
     background: url(../images/logogroot.png) no-repeat center center;
@@ -116,37 +126,29 @@ font-size: 0.8em;
     padding-top: 10px;
 }
 
-.btn-knop:hover{
-    background: #c0392b;
-    border: none;
-    border-radius: 100%;
-
-    border: 8px solid #c0392b;
-
+.knop{
+display: block;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: #a7a7a7;
+  margin: 36px;
+  width: 144px;
+  height: 144px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
 }
-.btn-knop{
-    background: #e74c3c;
-    border: none;
-    background-color: none;
-    border: 10px solid #c0392b;
-    border-radius: 100%;
-    text-shadow: none;
-    box-shadow: none;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
-    font-weight: bold;
-    width: 250px;
-    height: 250px;
-    margin-bottom: 25px;
-    padding-top: 10px;
 }
-.btn-knop:hover{
-    background: #c0392b;
-    border: none;
-    border-radius: 100%;
-
-    border: 8px solid #c0392b;
-
+a.knop:hover {
+  text-decoration: none;
+  color: #555;
+  background: #f0f;
 }
 .light{
     background-color: #3498db;
@@ -225,4 +227,60 @@ font-size: 0.8em;
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+a.knop{
+margin-right: 30px;
+	width: 250px;
+	height: 250px;
+	display: inline-block;
+	position: relative;
+	line-height: 64px;
+	background-color: #eaeaea;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #eaeaea);
+	background-image: -moz-linear-gradient(top, #f6f6f6, #eaeaea); 
+	background-image: -ms-linear-gradient(top, #f6f6f6, #eaeaea); 
+	background-image: -o-linear-gradient(top, #f6f6f6, #eaeaea);
+	background-image: linear-gradient(top, #f6f6f6, #eaeaea);
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+a.knop:active {
+	top: 1px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
+	background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
+	background-image: -moz-linear-gradient(top, #eaeaea, #f6f6f6); 
+	background-image: -ms-linear-gradient(top, #eaeaea, #f6f6f6); 
+	background-image: -o-linear-gradient(top, #eaeaea, #f6f6f6);
+	background-image: linear-gradient(top, #eaeaea, #f6f6f6);
+}
+a.knop:before{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	background-color: #eaeaea;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	opacity: 0.5;		
+}
+a.knop:active::before {
+	top: -9px;
+}
+ 
+a.knop:hover::before {
+	opacity: 1;
+}
+ 
+a.knop:hover::before {
+	background-color: #2ecc71;
 }
