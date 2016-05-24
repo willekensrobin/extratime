@@ -12,9 +12,8 @@
 	$statement->execute(array(":id"=>$user_id));
 	
 	$userRow=$statement->fetch(PDO::FETCH_ASSOC);
-	
-?>
-<?php include('templates/header.php') ?>
+
+?><?php include('templates/header.php'); ?>
 
 <div class="clearfix"></div>
 	
@@ -30,5 +29,4 @@
 
 </div>
 
-</body>
-</html>
+<?php include('templates/footer.php'); ?>
