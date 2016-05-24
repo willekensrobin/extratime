@@ -18,7 +18,4 @@
 
 <h4>Mijn wedstrijden</h4>
     
-    
-    
-</body>
-</html>
+<?php include('templates/footer.php'); ?>

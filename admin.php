@@ -13,52 +13,39 @@
 	
 	$userRow=$statement->fetch(PDO::FETCH_ASSOC);
 	
-?><?php include('templates/adminheader.php');?>
+?><?php include('templates/header.php'); ?>
 
-
-<div class="clearfix"></div>
-    	
+<div id="page">
+    <div class="header">
+        <a href="#menu"></a>
+        <div class="logo"></div>
+    </div>
     
-<div class="container-fluid" style="margin-top:80px;">
-	
-    <div class="container">
+<div class="clearfix"></div>
+   
+    <div class="content">
 
+    <p class="h4 top100">Wedstrijden</p> 
 
-    <p class="h4">Wedstrijden</p> 
+    <a href="timeline.php">
+        <div class="row light">
 
-    <div>
-        
-        <a href="addgame.php">Wedstrijd aanmaken</a>
-
-        <div class="container center">      
-            <div class="row light">
-
-                <a class="btn btn-club" href="timeline.php" role="button">
-                <div class="col-xs-5 col-md-5 col-lg-5">
-                <img src="images/brugge.png" class="logoklein"> <br><p class="right">Club Brugge</p>
-                </div>
+        <div class="col-xs-5">
+        <img src="images/brugge.png" class="logoklein"> <br><p class="right">Club Brugge</p>
+        </div>
                 
-                <div class="col-xs-2 col-md-2 col-lg-2">
-                <p class="right">VS</p>
-                </div>
+        <div class="col-xs-2">
+        <p class="right">VS</p>
+        </div>
                 
-                <div class="col-xs-5 col-md-5 col-lg-5">
-                <img src="images/and.png" class="logoklein"> <p class="right">Anderlecht</p>
-                </div>
-            </a>
+        <div class="col-xs-5">
+        <img src="images/and.png" class="logoklein"> <p class="right">Anderlecht</p>
+        </div>
             
-            <input type="submit" placeholder="Aanpassen" name="editbtn" id="editbtn" />
-            <input type="submit" placeholder="Verwijderen" name="delbtn" id="delbtn" />
             
-            </div>
+        </div>
+    </a>   
 
-        </div>     
+    </div>   
 
-    </div>
-
-    </div>
-
-</div>
-
-</body>
-</html>
+<?php include('templates/footer.php'); ?> 
