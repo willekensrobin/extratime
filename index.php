@@ -37,7 +37,7 @@
         <div class="logo"></div>
     </div>
     <div class="content">
-        <button name="btn-login" class="btn btn-default"><a href="login.php">INLOGGEN</a></button><br><br>
+        <button name="btn-login" class="btn btn-default top100"><a href="login.php">INLOGGEN</a></button><br><br>
         <button name="btn-login" class="btn btn-default"><a href="signup.php">AANMELDEN</a></button><br><br>
     </div>
 			

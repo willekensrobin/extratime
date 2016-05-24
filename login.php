@@ -66,7 +66,7 @@ if(!empty($_POST))
     <div class="content">
                <form class="form-signin" method="post" id="login-form">
       
-        <h2 class="form-signin-heading">Aanmelden</h2>
+        <h2 class="form-signin-heading top50">Aanmelden</h2>
         
         <div id="error">
         <?php
@@ -81,7 +81,7 @@ if(!empty($_POST))
 		?>
         </div>
         
-        <div class="form-group">
+        <div class="form-group top50">
         <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam of Email" required />
         <span id="check-e"></span>
         </div>
@@ -91,7 +91,7 @@ if(!empty($_POST))
         </div>
        
         
-        <div class="form-group center">
+        <div class="form-group center top50">
             <button type="submit" name="btn-login" class="btn btn-default">
             AANMELDEN
             </button>
@@ -103,7 +103,7 @@ if(!empty($_POST))
 			
     <?php include_once('templates/header.php') ?>
     
-</div><div class="site-footer center">Copyright Extra TimeLine</div>
+</div><div class="site-footer center top50">Copyright Extra TimeLine</div>
     
 	</body>
 </html>

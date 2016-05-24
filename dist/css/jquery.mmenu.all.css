@@ -38,7 +38,7 @@
 .mm-listview,.mm-listview>li{list-style:none;display:block;padding:0;margin:0}
 .mm-listview{font:inherit;font-size:14px;line-height:20px}
 .mm-listview>li{position:relative}
-.mm-listview>li,.mm-listview>li .mm-next,.mm-listview>li .mm-next:before,.mm-listview>li:after{border-color:inherit}
+.mm-listview>li,.mm-listview>li .mm-next,.mm-listview>li .mm-next:before,.mm-listview>li:after{border-color:inherit;border-bottom: transparent}
 .mm-listview>li>a,.mm-listview>li>span{color:inherit;display:block;padding:10px 10px 10px 20px;margin:0}
 .mm-listview>li>a.mm-arrow,.mm-listview>li>span.mm-arrow{padding-right:50px}
 .mm-listview>li:not(.mm-divider):after{content:'';border-bottom-width:1px;border-bottom-style:solid;display:block;position:absolute;right:0;bottom:0;left:20px}
