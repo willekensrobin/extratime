@@ -29,6 +29,15 @@ html,body{height:100%;}
 .bigfont{
     font-size: 2em;
 }
+.maxwidth150{
+    max-width: 150px;
+}
+.form-group {
+    width: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 .logo{
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;

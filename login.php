@@ -100,5 +100,10 @@ if(!empty($_POST))
             <label>Nog geen account? <a href="signup.php">Registreer</a></label>
       </form>
     </div>
+
+			
+    <?php include_once('templates/header.php') ?>
+    
+</div>
 			
 <?php include('templates/footer.php'); ?>
