@@ -1,6 +1,6 @@
 <?php
 
-require_once('db.class.php');
+include_once('db.class.php');
 
 class User
 {	
@@ -120,21 +120,25 @@ class User
     public function registeradmin()
 	{
 		try
-		{
-            
+		{    
             $m_iType = 1;
+            $m_iCode = $this->Code;
+            $username = $this->Username;
+            $firstname = $this->Firstname;
+            $lastname = $this->Lastname;
+            $email = $this->Email;
 			$password = password_hash($this->Password, PASSWORD_DEFAULT);
 			
 			$statement = $this->conn->prepare("INSERT INTO db_user(username, firstname, lastname, email, password, type, code) 
 		                                               VALUES(:username, :firstname, :lastname, :email, :password, :type, :code)");
 												  
-			$statement->bindparam(":username", $this->Username);
-            $statement->bindparam(":firstname", $this->Firstname);
-            $statement->bindparam(":lastname", $this->Lastname);
-			$statement->bindparam(":email", $this->Email);
+			$statement->bindparam(":username", $username);
+            $statement->bindparam(":firstname", $firstname);
+            $statement->bindparam(":lastname", $lastname);
+			$statement->bindparam(":email", $email);
 			$statement->bindparam(":password", $password);
             $statement->bindparam(":type", $m_iType);
-            $statement->bindparam(":code", $this->Code);
+            $statement->bindparam(":code", $m_iCode);
             
 			$statement->execute();	
 			
@@ -147,14 +151,15 @@ class User
 	}
 
 		
-	public function login($username,$email,$password)
+	public function login()
 	{
-		try
-		{
+            $username = $this->Username;
+            $email = $this->Username;
+            $password = $this->Password;        
+            
 			$statement = $this->conn->prepare("SELECT id, username, email, password, type FROM db_user WHERE username=:username OR email=:email");
 			$statement->execute(array(':username'=>$username, ':email'=>$email));
 			$userRow=$statement->fetch(PDO::FETCH_ASSOC);
-            $type = $userRow['type'];
             
 			if($statement->rowCount() == 1)
 			{
@@ -168,11 +173,6 @@ class User
 					return false;
 				}
 			}
-		}
-		catch(PDOException $e)
-		{
-			echo $e->getMessage();
-		}
 	}
 	
 	public function loggedin()

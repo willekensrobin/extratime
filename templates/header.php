@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/style.css"> 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
+
     <script type="text/javascript">
 			$(function() {
 				$('nav#menu').mmenu();

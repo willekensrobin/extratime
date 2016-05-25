@@ -1,20 +1,18 @@
-<?php
+<?php include('classes/userauth.class.php');?>
+<?php include('templates/header.php');?>
 
-	require_once("classes/session.php");
+<div class="clearfix"></div>
 	
-	include_once("classes/user.class.php");
-
-	$auth_user = new User();
+    <div class="container-fluid" style="margin-top:80px;">
 	
-	$user_id = $_SESSION['session'];
-	
-	$statement = $auth_user->runQuery("SELECT * FROM db_user WHERE id=:id");
-	$statement->execute(array(":id"=>$user_id));
-	
-	$userRow=$statement->fetch(PDO::FETCH_ASSOC);
-
-?><?php include('templates/header.php'); ?>
-
-<h4>Mijn wedstrijden</h4>
+    <div class="container">
     
-<?php include('templates/footer.php'); ?>
+        
+        <p class="h4">Mijn wedstrijden</p> 
+        
+    
+    </div>
+
+</div>
+    
+<?php include('templates/footer.php');?>

@@ -1,3 +1,5 @@
-<center><footer>Made with &hearts; in Mechelen</footer></center>
+<div class="bottom"> 
+    <p id="madewithlove">Made with &hearts; in Mechelen</p>
+</div>
 </body>
 </html>

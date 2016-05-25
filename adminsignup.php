@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('classes/user.class.php');
+include_once('classes/user.class.php');
 
 $user = new User();
 
@@ -12,59 +12,55 @@ if($user->loggedin()!="")
 
 if(!empty($_POST))
 {
-	$username = strip_tags($_POST['username']);
-	$email = strip_tags($_POST['email']);
-	$password = strip_tags($_POST['password']);
-    $firstname = strip_tags($_POST['firstname']);
-    $lastname = strip_tags($_POST['lastname']);
-    $code = strip_tags($_POST['admincode']);
+	$user->Username = $_POST['username'];
+    $user->Firstname = $_POST['firstname'];
+    $user->Lastname = $_POST['lastname'];
+    $user->Email = $_POST['email'];
+    $user->Password = $_POST['password'];
+    $user->Code = $_POST['admincode'];
 	
-	if($username=="")	{
+	if($user->Username=="")	{
 		$error[] = "Geef een gebruikersnaam in";	
 	}
-	else if($email=="")	{
+	else if($user->Email=="")	{
 		$error[] = "Geef een emailadres in";	
 	}
-	else if(!filter_var($email, FILTER_VALIDATE_EMAIL))	{
+	else if(!filter_var($user->Email, FILTER_VALIDATE_EMAIL))	{
 	    $error[] = 'Geef een geldig emailadres in';
 	}
-	else if($password=="")	{
+	else if($user->Password=="")	{
 		$error[] = "Wachtwoord invullen";
 	}
-	else if(strlen($password) < 6){
+	else if(strlen($user->Password) < 6){
 		$error[] = "Wachtwoord moet minstens 6 karakters bevatten";	
 	}
-    else if($firstname=="")	{
+    else if($user->Firstname=="")	{
 		$error[] = "Geef uw voornaam in";	
 	}
-    else if($lastname=="")	{
+    else if($user->Lastname=="")	{
 		$error[] = "Geef uw achternaam in";	
 	}
-    else if($code=="")	{
-		$error[] = "Geef uw admincode in";	
-	}
-    else if($code!= 111)	{
-		$error[] = "Geef uw admincode in";	
+    else if($user->Code!= 111)	{
+		$error[] = "Verkeerde activatiecode";	
 	}
 	else
 	{
 		try
 		{
 			$statement = $user->runQuery("SELECT username, email FROM db_user WHERE username=:username OR email=:email");
-			$statement->execute(array(':username'=>$username, ':email'=>$email));
+			$statement->execute(array(':username'=>$user->Username, ':email'=>$user->Email));
 			$row=$statement->fetch(PDO::FETCH_ASSOC);
 				
-			if($row['username']==$username) {
+			if($row['username']==$user->Username) {
 				$error[] = "Gebruikersnaam is al in gebruik";
 			}
-			else if($row['email']==$email) {
+			else if($row['email']==$user->Email) {
 				$error[] = "Emailadres is al in gebruik";
 			}
 			else
 			{
-				if($user->registeradmin($username, $firstname, $lastname, $email, $password, $code)){	
-					$user->redirect('signup.php?joined');
-				}
+				$user->registeradmin();
+                $user->redirect('signup.php?joined');
 			}
 		}
 		catch(PDOException $e)
@@ -88,6 +84,7 @@ if(!empty($_POST))
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!--[if IE]>
@@ -156,8 +153,6 @@ if(!empty($_POST))
             <label>Heeft u al een account? <a href="login.php">Aanmelden</a></label>
         </form>
        </div>
-</div>
-
 </div>
 
 <?php include('templates/footer.php'); ?>
