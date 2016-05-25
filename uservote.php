@@ -9,11 +9,27 @@ if(!empty($_POST))
 {
     try
     {
-        $vote->Red = $_POST['red'];
-        $vote->Yellow = $_POST['yellow'];
-        $vote->Goal = $_POST['goal'];
-        $vote->Offside = $_POST['offside'];
-        
+        if(isset($_POST['red']))
+        {
+          $vote->Red = $_POST['red'];
+            $vote->Red = 1;
+        }
+        else if(isset($_POST['yellow']))
+        {
+          $vote->Yellow = $_POST['yellow'];
+            $vote->Yellow = 1;
+        }
+        else if(isset($_POST['goal']))
+        {
+          $vote->Goal = $_POST['goal']; 
+            $vote->Goal = 1;
+        }
+        else if(isset($_POST['offside']))
+        {
+           $vote->Offside = $_POST['offside'];
+            $vote->Offside = 1;
+        }
+          
         $vote->vote();
         $vote->redirect('timeline.php');
     }

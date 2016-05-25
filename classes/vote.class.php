@@ -5,10 +5,10 @@ include_once('db.class.php');
 class Vote
 {	
 	private $conn;
-    private $m_iRed;
-    private $m_iYellow;
-    private $m_iGoal;
-    private $m_iOffside;
+    private $m_iRed = 0;
+    private $m_iYellow = 0;
+    private $m_iGoal = 0;
+    private $m_iOffside = 0;
     
     public function __set($p_sProperty, $p_vValue) {
 
@@ -68,8 +68,7 @@ class Vote
             $offside = $this->Offside;
 			
 			$statement = $this->conn->prepare("INSERT INTO db_votes(red, yellow, goal, offside) 
-		                                               VALUES(:red, :yellow, :goal, :offside)");
-												  
+		                                               VALUES(:red, :yellow, :goal, :offside)");									  
 			$statement->bindValue(":red", $red);
             $statement->bindValue(":yellow", $yellow);
             $statement->bindValue(":goal", $goal);
@@ -79,7 +78,7 @@ class Vote
     
     public function getVotes()
     {
-        $statement = $this->conn->prepare("SELECT * db_votes");
+        $statement = $this->conn->prepare("SELECT * FROM db_votes");
         return $statement;
     }
     
