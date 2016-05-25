@@ -1,19 +1,14 @@
-<?php
+<?php 
+include('classes/userauth.class.php');
+include('classes/vote.class.php');
 
-	require_once("classes/session.php");
-	
-	require_once("classes/user.class.php");
+$votes = new Vote();
 
-	$auth_user = new User();
-	
-	$user_id = $_SESSION['session'];
-	
-	$statement = $auth_user->runQuery("SELECT * FROM db_user WHERE id=:id");
-	$statement->execute(array(":id"=>$user_id));
-	
-	$userRow=$statement->fetch(PDO::FETCH_ASSOC);
+$votes->getVotes();
 
-?><?php include('templates/header.php'); ?>
+?>
+
+<?php include('templates/header.php');?>
 
 <div id="page">
    
@@ -23,25 +18,25 @@
     </div>
     
     <div class="content">
-            <a class="knop"></a>
+               <p class="h4 top100 marginleftright">Niet eens met de scheids, druk!</p>
+
+            <a href="uservote.php" class="knop"></a>
     </div>
     
     <div class="container center">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-1"><div class="circle"></div> 10' </div>
-    <div class="col-xs-1"><div class="circle"></div> 20' </div>
-    <div class="col-xs-1"><div class="circle"></div> 30' </div>
-    <div class="col-xs-1"><div class="circle"></div> 40' </div>
-    <div class="col-xs-1"><div class="circle"></div> 50' </div>
-    <div class="col-xs-1"><div class="circle"></div> 60' </div>
-    <div class="col-xs-1"><div class="circle"></div> 70' </div>
-    <div class="col-xs-1"><div class="circle"></div> 80' </div>
-    <div class="col-xs-1"><div class="circle"></div> 90' </div>
-    <div class="col-xs-1"><div class="circle"></div> +90' </div>
-    <div class="col-xs-1"></div>
-
-    </div>
+        
+    <div class="col-xs-12">
+    <?php 
+    //$v= $votes->fetch(PDO::FETCH_ASSOC); 
+    //
+    //echo "Rood " . count($v['red']) . "Geel" . count($v['yellow']) . "Goal" . count($v['goal']) . "Buitenspel" . count($v['offside']); 
     
+    ?>
+    
+    </div>
+
+    
+</div>
 </div>
 
 <?php include('templates/footer.php'); ?>

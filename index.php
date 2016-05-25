@@ -12,6 +12,7 @@
     <link type="text/css" rel="stylesheet" href="css/demo.css" />
     <link type="text/css" rel="stylesheet" href="dist/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" href="css/style.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
     <script type="text/javascript">
@@ -38,6 +39,8 @@
 <div class="content">
     <button name="btn-login" class="btn btn-default top100"><a href="login.php">INLOGGEN</a></button><br><br>
     <button name="btn-login" class="btn btn-default"><a href="signup.php">AANMELDEN</a></button><br><br>
+</div>
+
 </div>
 
 <?php include('templates/footer.php'); ?>	

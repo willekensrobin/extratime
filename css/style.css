@@ -3,8 +3,15 @@ body{
     color: white;
     background-position: top center;
     background-size: cover;
+    font-family: 'Open Sans', sans-serif;
 }
 html,body{height:100%;}
+.h4{
+    font-size: 2em;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
 .klein{
     max-width: 600px;
     margin-top: 25px;
@@ -57,7 +64,7 @@ html,body{height:100%;}
 
 }
 .logoklein{
-    height: 40px;
+    height: 60px;
 }
 nav{
     font-size: 2em;
@@ -75,6 +82,11 @@ nav{
 .iconmenu{
     height: 20px;
     margin-right: 20px;
+}
+.vs{
+    font-size: 2em;
+    margin-top: 22px;
+    font-weight: bolder;
 }
 .dark{
     background-color: #eaeaea;
@@ -161,6 +173,7 @@ display: block;
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
   color: #a7a7a7;
   margin: 36px;
+  margin-top: 70px;
   width: 144px;
   height: 144px;
   position: relative;
@@ -176,7 +189,13 @@ a.knop:hover {
   background: #fff;
 }
 .light{
-    background-color: #3498db;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: -25px;
+}
+.dark{
+    background-color: transparent;
+    margin-bottom: -25px;
+
 }
 .form-control{
     border-radius: 0;
@@ -311,4 +330,70 @@ a.knop:hover::before {
  
 a.knop:hover::before {
 	background-color: #2ecc71;
+}
+
+.card-yellow {
+  border: none;  
+  
+  height: 100px;
+width:  100px;
+    background-image: url(../images/yellow.svg);
+background-color: none;
+    margin-top: 140px;
+}
+
+.card-red {
+    border: none;  
+  
+  height:  100px;
+width:  100px;
+    background-image: url(../images/red.svg);
+background-color: none;
+    margin-top: 140px;
+}
+
+.card-goal {
+  border: none;  
+  
+  height: 100px;
+width:  100px;
+    background-image: url(../images/ballwhite.svg);
+background-color: none;
+  border-radius: 10px;
+    margin-top: 140px;
+
+}
+
+.card-offside {
+   border: none;  
+  
+  height:  100px;
+width:  100px;
+    background-image: url(../images/flag.svg);
+background-color: none;
+    margin-top: 140px;
+
+}
+.bottom{
+    bottom: 0;
+
+    display: block;
+    width: 75%;
+position: fixed;
+left: 50%;
+margin-left: -37.5%;
+}
+footer{
+    text-align: center;
+}
+
+#madewithlove {
+    text-align: center;
+}
+.marginleftright{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+input{
+    background: none;
 }

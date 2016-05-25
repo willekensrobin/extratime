@@ -1,19 +1,5 @@
-<?php
-
-	require_once("classes/session.php");
-
-	require_once("classes/user.class.php");
-	$auth_user = new User();
-	
-	
-	$user_id = $_SESSION['session'];
-	
-	$statement = $auth_user->runQuery("SELECT * FROM db_user WHERE id=:id");
-	$statement->execute(array(":id"=>$user_id));
-	
-	$userRow=$statement->fetch(PDO::FETCH_ASSOC);
-	
-?><?php include('templates/header.php'); ?>
+<?php include('classes/userauth.class.php');?>
+<?php include('templates/header.php');?>
 
 <div id="page">
     <div class="header">
@@ -25,8 +11,10 @@
    
     <div class="content">
 
-    <p class="h4 top100">Wedstrijden</p> 
-
+    <p class="h4 top100">Wedstrijden</p>
+     
+    <a href="addgame.php">Wedstrijd toevoegen</a>
+    
     <a href="timeline.php">
         <div class="row light">
 
@@ -40,12 +28,15 @@
                 
         <div class="col-xs-5">
         <img src="images/and.png" class="logoklein"> <p class="right">Anderlecht</p>
+        
         </div>
             
-            
+        <a href="editgame.php">Aanpassen</a>
+                
         </div>
     </a>   
 
-    </div>   
+    </div> 
+</div>  
 
 <?php include('templates/footer.php'); ?> 

@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once("classes/user.class.php");
+include_once("classes/user.class.php");
 
 $login = new User();
 
@@ -13,18 +13,18 @@ if($login->loggedin()!="")
 
 if(!empty($_POST))
 {
-	$username = strip_tags($_POST['username']);
-	$email = strip_tags($_POST['username']);
-	$password = strip_tags($_POST['password']);
-		
-	if($login->login($username,$email,$password))
-	{
-		$login->redirect('home.php');
-	}
-	else
-	{
-		$error = "Email en wachtwoord zijn ongeldig";
-	}	
+    try
+    {
+        $login->Username = $_POST['username'];
+        $login->Password = $_POST['password'];
+        
+        $login->login();
+        $login->redirect('home.php');
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }		
 }
 ?>
 <!DOCTYPE html>
@@ -43,6 +43,7 @@ if(!empty($_POST))
     <link rel="stylesheet" href="css/style.css"> 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
     <script type="text/javascript">
 			$(function() {
 				$('nav#menu').mmenu();
