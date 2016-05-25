@@ -163,25 +163,17 @@ font-size: 0.8em;
     padding-top: 10px;
 }
 
-.knop{
-display: block;
-  background-color: #f7f7f7;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  color: #a7a7a7;
-  margin: 36px;
-  margin-top: 70px;
-  width: 144px;
-  height: 144px;
-  position: relative;
-  text-align: center;
-  line-height: 144px;
-  border-radius: 50%;
-  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+
+.containerclub{
+    padding-right: 15px;
+    padding-left: 15px;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+    height: 120px;
+    padding-top: 20px;
 }
+
 
 a.knop:hover {
   text-decoration: none;
@@ -190,11 +182,10 @@ a.knop:hover {
 }
 .light{
     background-color: rgba(0, 0, 0, 0.3);
-    margin-bottom: -25px;
+    display: block;
 }
 .dark{
     background-color: transparent;
-    margin-bottom: -25px;
 
 }
 .form-control{
@@ -276,9 +267,9 @@ a.knop:hover {
     .sidenav a {font-size: 18px;}
 }
 a.knop{
-margin-right: 30px;
-	width: 250px;
-	height: 250px;
+    margin-top: 50px;
+	width: 200px;
+	height: 200px;
 	display: inline-block;
 	position: relative;
 	line-height: 64px;

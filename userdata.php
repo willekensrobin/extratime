@@ -1,18 +1,20 @@
 <?php include('classes/userauth.class.php');?>
 <?php include('templates/header.php');?>
 
-<div class="clearfix"></div>
-	
-    <div class="container-fluid" style="margin-top:80px;">
-	
-    <div class="container">
+<div id="page">
+   
+    <div class="header">
+        <a href="#menu"></a>
+        <div class="logo"></div>
+    </div>
     
-        
-        <p class="h4">Mijn wedstrijden</p> 
-        
-    
+    <div class="content">
+               <p class="h4 top100 marginleftright">Mijn wedstrijden</p>
+
     </div>
 
-</div>
     
-<?php include('templates/footer.php');?>
+</div>
+
+
+<?php include('templates/footer.php'); ?>
