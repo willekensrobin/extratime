@@ -2,13 +2,63 @@
 include('classes/userauth.class.php');
 include('classes/vote.class.php');
 
-$votes = new Vote();
+$vote = new Vote();
 
-$votes->getVotes();
-
+if(!empty($_POST))
+{
+    try
+    {
+        if(isset($_POST['red1']))
+        {
+          $vote->Red1 = $_POST['red1'];
+            $vote->Red1 = 1;
+        }
+        else if(isset($_POST['yellow1']))
+        {
+          $vote->Yellow1 = $_POST['yellow1'];
+            $vote->Yellow1 = 1;
+        }
+        else if(isset($_POST['red2']))
+        {
+          $vote->Red2 = $_POST['red2'];
+            $vote->Red2 = 1;
+        }
+        else if(isset($_POST['yellow2']))
+        {
+          $vote->Yellow2 = $_POST['yellow2'];
+            $vote->Yellow2 = 1;
+        }
+          
+        $vote->vote();
+    }
+    catch(PDOException $e)
+    {
+		echo $e->getMessage();
+    }
+}
 ?>
-
 <?php include('templates/header.php');?>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+$("#page2").hide();
+$("#page").show();
+
+$('.knopwhist').click(function(){
+    $("#page").hide();    
+    $("#page2").slideToggle();
+});
+
+$('.btnBack').click(function(){
+    $("#page2").hide();    
+    $("#page").slideToggle();
+});
+
+});
+
+</script>
 
 <div id="page">
    
@@ -20,17 +70,42 @@ $votes->getVotes();
     <div class="content">
         <p class="h4 top100"><time>00:00</time></p>
 
-
-            <a href="uservote.php"><img class="knopwhist"src="images/whis.svg"></a>
+            <a href="#"><img class="knopwhist"src="images/whis.svg"></a>
     </div>
     
     <div class="container center">  
                 <div class="row">
                     <div class="col-xs-2"></div>
-                <div class="col-xs-4"><input type="button" value="<?php echo 2?>" name="red" id="red" class="scard-red" /></div>
-                <div class="col-xs-4"><input type="button" value="<?php echo 4 ?>" name="yellow" id="yellow" class="scard-yellow" /></div>
+                <div class="col-xs-4"><input type="button" value="<?php echo 2?>" name="red1" id="red1" class="scard-red" /></div>
+                <div class="col-xs-4"><input type="button" value="<?php echo 4 ?>" name="yellow1" id="yellow1" class="scard-yellow" /></div>
+                   
+                <div class="col-xs-4"><input type="button" value="<?php echo 2?>" name="red2" id="red2" class="scard-red" /></div>
+                <div class="col-xs-4"><input type="button" value="<?php echo 4 ?>" name="yellow2" id="yellow2" class="scard-yellow" /></div>
                     <div class="col-xs-2"></div>
         </div>
+    </div>
+    
+</div>
+
+<div id="page2">
+   
+    <div class="header">
+        <a href="#menu"></a>
+        <div class="logo"></div>
+    </div>
+    
+    <a href="#" class="btnBack">X</a>
+    
+    <div class="container center">
+           
+            <form action="" method="post">
+                <div class="col-xs-6 center"><input type="submit" value="" name="red1" id="red1" class="card-red" />  </div>
+                <div class="col-xs-6"><input type="submit" value="" name="yellow1" id="yellow1" class="card-yellow" /></div>
+                
+                <div class="col-xs-6 center"><input type="submit" value="" name="red2" id="red2" class="card-red" />  </div>
+                <div class="col-xs-6"><input type="submit" value="" name="yellow2" id="yellow2" class="card-yellow" /></div>
+            </form>
+        
     </div>
     
 </div>

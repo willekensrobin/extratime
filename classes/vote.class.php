@@ -5,29 +5,29 @@ include_once('db.class.php');
 class Vote
 {	
 	private $conn;
-    private $m_iRed = 0;
-    private $m_iYellow = 0;
-    private $m_iGoal = 0;
-    private $m_iOffside = 0;
+    private $m_iRed1 = 0;
+    private $m_iYellow1 = 0;
+    private $m_iRed2 = 0;
+    private $m_iYellow2 = 0;
     
     public function __set($p_sProperty, $p_vValue) {
 
 		switch ($p_sProperty) {
 			
-			case 'Red': 
-			$this->m_iRed = $p_vValue;
+			case 'Red1': 
+			$this->m_iRed1 = $p_vValue;
 			break;
 
-			case 'Yellow':
-				$this->m_iYellow = $p_vValue;
+			case 'Yellow1':
+				$this->m_iYellow1 = $p_vValue;
 			break;
                 
-            case 'Goal':
-				$this->m_iGoal = $p_vValue;
+            case 'Red2':
+				$this->m_iRed2 = $p_vValue;
 			break;
 
-			case 'Offside': 
-				$this->m_iOffside = $p_vValue;
+			case 'Yellow2': 
+				$this->m_iYellow2 = $p_vValue;
 			break;
 		}
 }
@@ -35,20 +35,20 @@ class Vote
 
 		switch ($p_sProperty) {
 
-			case 'Red':
-			return $this->m_iRed;
+			case 'Red1':
+			return $this->m_iRed1;
 			break;
 
-			case 'Yellow':
-			return $this->m_iYellow;
+			case 'Yellow1':
+			return $this->m_iYellow1;
 			break;
 
-			case 'Goal':
-			return $this->m_iGoal;
+			case 'Red2':
+			return $this->m_iRed2;
 			break;
 
-			case 'Offside':
-			return $this->m_iOffside;
+			case 'Yellow2':
+			return $this->m_iYellow2;
 			break;
 		}
 }
@@ -62,17 +62,17 @@ class Vote
     
     public function vote()
     {
-            $red = $this->Red;
-            $yellow = $this->Yellow;
-            $goal = $this->Goal;
-            $offside = $this->Offside;
+            $red1 = $this->Red1;
+            $yellow1 = $this->Yellow1;
+            $red2 = $this->Red2;
+            $yellow2 = $this->Yellow2;
 			
-			$statement = $this->conn->prepare("INSERT INTO db_votes(red, yellow, goal, offside) 
-		                                               VALUES(:red, :yellow, :goal, :offside)");									  
-			$statement->bindValue(":red", $red);
-            $statement->bindValue(":yellow", $yellow);
-            $statement->bindValue(":goal", $goal);
-			$statement->bindValue(":offside", $offside);
+			$statement = $this->conn->prepare("INSERT INTO db_votes(red1, yellow1, red2, yellow2) 
+		                                               VALUES(:red1, :yellow1, :red2, :yellow2)");									  
+			$statement->bindValue(":red1", $red1);
+            $statement->bindValue(":yellow1", $yellow1);
+            $statement->bindValue(":red2", $red2);
+            $statement->bindValue(":yellow2", $yellow2);
 			$statement->execute();
     }
     

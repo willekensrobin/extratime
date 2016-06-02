@@ -9,29 +9,28 @@ if(!empty($_POST))
 {
     try
     {
-        if(isset($_POST['red']))
+        if(isset($_POST['red1']))
         {
-          $vote->Red = $_POST['red'];
-            $vote->Red = 1;
+          $vote->Red1 = $_POST['red1'];
+            $vote->Red1 = 1;
         }
-        else if(isset($_POST['yellow']))
+        else if(isset($_POST['yellow1']))
         {
-          $vote->Yellow = $_POST['yellow'];
-            $vote->Yellow = 1;
+          $vote->Yellow1 = $_POST['yellow1'];
+            $vote->Yellow1 = 1;
         }
-        else if(isset($_POST['goal']))
+        else if(isset($_POST['red2']))
         {
-          $vote->Goal = $_POST['goal']; 
-            $vote->Goal = 1;
+          $vote->Red2 = $_POST['red2'];
+            $vote->Red2 = 1;
         }
-        else if(isset($_POST['offside']))
+        else if(isset($_POST['yellow2']))
         {
-           $vote->Offside = $_POST['offside'];
-            $vote->Offside = 1;
+          $vote->Yellow2 = $_POST['yellow2'];
+            $vote->Yellow2 = 1;
         }
           
         $vote->vote();
-        $vote->redirect('timeline.php');
     }
     catch(PDOException $e)
     {

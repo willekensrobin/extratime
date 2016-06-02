@@ -17,16 +17,15 @@ if(!empty($_POST))
     {
         $login->Username = $_POST['username'];
         $login->Password = $_POST['password'];
-        
+            
         $login->login();
-        $login->redirect('home.php');
     }
     catch(PDOException $e)
     {
         echo $e->getMessage();
     }		
 }
-?>
+?><?php include_once('templates/header.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,11 +70,11 @@ if(!empty($_POST))
         
         <div id="error">
         <?php
-			if(isset($error))
+			if(isset($e))
 			{
 				?>
                 <div class="alert alert-danger">
-                   <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?>
+                   <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $e; ?>
                 </div>
                 <?php
 			}
@@ -101,9 +100,6 @@ if(!empty($_POST))
             <label>Nog geen account? <a href="signup.php">Registreer</a></label>
       </form>
     </div>
-
-			
-    <?php include_once('templates/header.php') ?>
     
 </div>
 			

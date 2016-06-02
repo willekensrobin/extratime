@@ -155,18 +155,26 @@ class User
 	{
             $username = $this->Username;
             $email = $this->Username;
-            $password = $this->Password;        
+            $password = $this->Password;
             
 			$statement = $this->conn->prepare("SELECT id, username, email, password, type FROM db_user WHERE username=:username OR email=:email");
 			$statement->execute(array(':username'=>$username, ':email'=>$email));
 			$userRow=$statement->fetch(PDO::FETCH_ASSOC);
+            $type = $userRow['type'];
             
 			if($statement->rowCount() == 1)
 			{
-				if(password_verify($password, $userRow['password']))
+				if(password_verify($password, $userRow['password']) && $type == 0)
 				{
 					$_SESSION['session'] = $userRow['id'];
-					return true;
+                    header('Location: home.php');
+					return true;        
+				}
+                else if(password_verify($password, $userRow['password']) && $type == 1)
+				{
+					$_SESSION['session'] = $userRow['id'];
+                    header('Location: admin.php');
+					return true;        
 				}
 				else
 				{
@@ -177,9 +185,9 @@ class User
 	
 	public function loggedin()
 	{
-		if(isset($_SESSION['session']))
+        if(isset($_SESSION['session']))
 		{
-			return true;
+            return true;
 		}
 	}
 	
