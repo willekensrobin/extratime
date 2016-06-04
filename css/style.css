@@ -37,6 +37,15 @@ input{
 .top100{
     margin-top: 100px;
 }
+.top100{
+    margin-top: 100px;
+}
+.centervertical{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 .bigfont{
     font-size: 2em;
 }
@@ -142,6 +151,7 @@ font-size: 0.8em;
     color: #000080;
 }
 .btn-default{
+    font-size: 1.4em;
     background: none;
     background-color: none;
     border: 5px solid white;
@@ -151,6 +161,7 @@ font-size: 0.8em;
     padding-right: 1.5em;
     padding-left: 1.5em;
     font-weight: bold;
+    width: 250px;
 }
 .btn-club{
     background: none;

@@ -66,7 +66,6 @@ if(!empty($_POST))
     <div class="content">
                <form class="form-signin" method="post" id="login-form">
       
-        <h2 class="form-signin-heading top50">Aanmelden</h2>
         
         <div id="error">
         <?php

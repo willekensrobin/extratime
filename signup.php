@@ -104,7 +104,6 @@ if(!empty($_POST))
     
     <div class="content">
         <form method="post" class="form-signin">
-            <h2 class="form-signin-heading">Registreren</h2>
             <?php
 			if(isset($error))
 			{
