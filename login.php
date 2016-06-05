@@ -64,6 +64,7 @@ if(!empty($_POST))
         <div class="logo"></div>
     </div>
     <div class="content">
+        <div class="clearfix"></div>
                <form class="form-signin" method="post" id="login-form">
       
         
@@ -80,7 +81,7 @@ if(!empty($_POST))
 		?>
         </div>
         
-        <div class="form-group top50">
+        <div class="form-group top125">
         <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam of Email" required />
         <span id="check-e"></span>
         </div>
@@ -91,7 +92,7 @@ if(!empty($_POST))
        
         
         <div class="form-group center top50">
-            <button type="submit" name="btn-login" class="btn btn-default">
+            <button type="submit" name="btn-login" class="btn btn-logsign">
             AANMELDEN
             </button>
         </div>  

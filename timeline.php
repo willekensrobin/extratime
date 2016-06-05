@@ -68,20 +68,24 @@ $('.btnBack').click(function(){
     </div>
     
     <div class="content">
-        <p class="h4 top100"><time>00:00</time></p>
+        
+
+<p class="h5 top75"><time>00:00</time></p>
 
             <a href="#"><img class="knopwhist"src="images/whis.svg"></a>
     </div>
     
     <div class="container center">  
-                <div class="row">
-                    <div class="col-xs-2"></div>
-                <div class="col-xs-4"><input type="button" value="<?php echo 2?>" name="red1" id="red1" class="scard-red" /></div>
-                <div class="col-xs-4"><input type="button" value="<?php echo 4 ?>" name="yellow1" id="yellow1" class="scard-yellow" /></div>
-                   
-                <div class="col-xs-4"><input type="button" value="<?php echo 2?>" name="red2" id="red2" class="scard-red" /></div>
-                <div class="col-xs-4"><input type="button" value="<?php echo 4 ?>" name="yellow2" id="yellow2" class="scard-yellow" /></div>
-                    <div class="col-xs-2"></div>
+         <div class="row">
+            <div class="col-xs-5"> <img class="logoklein" src="uploads/<?php echo $game['picture'] ?>"/ alt=""></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""></div>
+        </div>
+        
+        <div class="row">
+                <div class="col-xs-5"><input type="button" value="<?php echo 2?>" name="red1" id="red1" class="scard-red" /><input type="button" value="<?php echo 4 ?>" name="yellow1" id="yellow1" class="scard-yellow" /></div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-5"><input type="button" value="<?php echo 2?>" name="red2" id="red2" class="scard-red" /><input type="button" value="<?php echo 4 ?>" name="yellow2" id="yellow2" class="scard-yellow" /></div>
         </div>
     </div>
     
@@ -97,13 +101,15 @@ $('.btnBack').click(function(){
     <a href="#" class="btnBack">X</a>
     
     <div class="container center">
-           
+        <div class=" top150">
+            <div class="col-xs-5"> <img class="logoklein" src="uploads/<?php echo $game['picture'] ?>"/ alt=""></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""></div>
+        </div>
             <form action="" method="post">
-                <div class="col-xs-6 center"><input type="submit" value="" name="red1" id="red1" class="card-red" />  </div>
-                <div class="col-xs-6"><input type="submit" value="" name="yellow1" id="yellow1" class="card-yellow" /></div>
-                
-                <div class="col-xs-6 center"><input type="submit" value="" name="red2" id="red2" class="card-red" />  </div>
-                <div class="col-xs-6"><input type="submit" value="" name="yellow2" id="yellow2" class="card-yellow" /></div>
+                <div class="col-xs-5 "><input type="submit" value="" name="red1" id="red1" class="scard-red" /><input type="submit" value="" name="yellow1" id="yellow1" class="scard-yellow" />  </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-5 "><input type="submit" value="" name="red2" id="red2" class="scard-red" /><input type="submit" value="" name="yellow2" id="yellow2" class="scard-yellow" />  </div>
             </form>
         
     </div>

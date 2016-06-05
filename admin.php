@@ -22,24 +22,25 @@ if(!empty($_POST['delBtn']))
     
 <div class="clearfix"></div>
    
-    <div class="content">
-
-    <p class="h4 top100">Wedstrijden</p> 
-       
-       <a href="addgame.php">Wedstrijd aanmaken</a>
+    <div class="content top75">
        
        <?php while($game = $games->fetch(PDO::FETCH_ASSOC)): ?>
         <a href="timeline.php">
-        <div class="containerclub light">
+        <div class="containerclub2">
             <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picture'] ?>"/ alt=""><br><p class="right"><?php echo $game['hometeam'];  ?></p></div>
             <div class="col-xs-2"><p class="right vs">VS</p></div>    
             <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""><p class="right"><?php echo $game['visitors']; ?></p></div>
             </a>
             <a href="editgame.php">Aanpassen</a>
-            <input type="submit" name="delBtn" class="" id="" value="Verwijderen"/>
+            <input type="submit" name="delBtn" class="noback" id="" value="Verwijderen"/>
         </div>
-        <?php endwhile; ?>   
-
+        <?php endwhile; ?>  
+        
+        <div class="center top50">
+            <a class="btn btn-logsign" href="addgame.php">
+            AANMELDEN
+            </a>
+        </div>  
     </div>   
 </div>
 

@@ -23,9 +23,8 @@ if(!empty($_POST))
     </div>
     
     <div class="content">
-        <form class="addgame-form" method="post" action="" enctype="multipart/form-data" id="addgame-form">
+        <form class="addgame-form top75" method="post" action="" enctype="multipart/form-data" id="addgame-form">
       
-            <h2 class="form-signin-heading top50">Wedstrijd aanmaken</h2>
 
             <div id="error">
             <?php
@@ -46,21 +45,23 @@ if(!empty($_POST))
             </div>
 
             <div class="form-group">
-            <input type="file" class="form-control" name="team-logo1" placeholder="Logo" value="" />
+            <input type="file" class="form-control noline" name="team-logo1" id="file" placeholder="team-logo1" value="" /><br>
+            <label for="file" class="upload"><img class="iconmenu" src="images/upload.svg"> Kies het logo!</label>
             </div>
             
-            <div class="form-group top50">
+            <div class="form-group top75">
             <input type="text" class="form-control" name="team-2" placeholder="Team 2" value="" required />
             <span id="check-e"></span>
             </div>
 
             <div class="form-group">
-            <input type="file" class="form-control" name="team-logo2" placeholder="Logo" value="" />
+            <input type="file" class="form-control noline" id="file2" name="team-logo2" placeholder="Logo" value="" /><br>
+            <label for="file2" class="upload"><img class="iconmenu" src="images/upload.svg"> Kies het logo!</label>
             </div>
 
 
-            <div class="form-group center top50">
-                <button type="submit" name="btn-login" class="btn btn-default">
+            <div class="form-group center top75">
+                <button type="submit" name="btn-login" class="btn btn-logsign">
                 Aanmaken
                 </button>
             </div>  

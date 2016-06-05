@@ -130,7 +130,7 @@ if(!empty($_POST))
 			{
 				 ?>
                  <div class="alert alert-info">
-                      <i class="glyphicon glyphicon-log-in"></i> &nbsp; U bent gerigstreerd <a href='login.php'>Log</a> hier in
+                     <i class="glyphicon glyphicon-log-in"></i> &nbsp; U bent geregistreerd <a href='login.php'>Log hier in.</a>
                  </div>
                  <?php
 			}

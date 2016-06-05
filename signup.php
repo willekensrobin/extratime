@@ -81,6 +81,7 @@ if(!empty($_POST))
     <link rel="stylesheet" href="css/style.css"> 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
     <script type="text/javascript">
 			$(function() {
 				$('nav#menu').mmenu();
@@ -103,14 +104,16 @@ if(!empty($_POST))
     </div>
     
     <div class="content">
-        <form method="post" class="form-signin">
+        <form method="post" class="form-signin top50">
+            <div class="clearfix"></div>
+
             <?php
 			if(isset($error))
 			{
 			 	foreach($error as $error)
 			 	{
 					 ?>
-                     <div class="alert alert-danger">
+                     <div class="alert alert-danger top50">
                         <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?>
                      </div>
                      <?php
@@ -119,12 +122,13 @@ if(!empty($_POST))
 			else if(isset($_GET['joined']))
 			{
 				 ?>
-                 <div class="alert alert-info">
-                      <i class="glyphicon glyphicon-log-in"></i> &nbsp; U bent gerigstreerd <a href='login.php'>Log</a> hier in
+                 <div class="alert alert-info top50">
+                      <i class="glyphicon glyphicon-log-in"></i> &nbsp; U bent geregistreerd <a href='login.php'>Log hier in.</a>
                  </div>
                  <?php
 			}
 			?>
+            
             <div class="form-group">
             <input type="text" class="form-control" name="firstname" placeholder="Voornaam" value="<?php if(isset($error)){echo $user->Firstname;}?>" />
             </div>
@@ -140,12 +144,14 @@ if(!empty($_POST))
             <div class="form-group">
             	<input type="password" class="form-control" name="password" placeholder="Wachtwoord" />
             </div>
-            
-            <a href="adminsignup.php">Heeft u een admincode?</a>
-            
+                        
             <div class="clearfix"></div>
-            <div class="form-group center">
-            	<button type="submit" class="btn btn-primary" name="btn-signup">
+            <br>
+            <a class="top50" href="adminsignup.php">Heeft u een admincode?</a>
+
+            <div class="form-group center top10">
+
+            	<button type="submit" class="btn btn-logsign" name="btn-signup">
                 	REGISTREER
                 </button>
             </div>
@@ -153,6 +159,6 @@ if(!empty($_POST))
             <label>Heeft u al een account? <a href="login.php">Aanmelden</a></label>
         </form>
        </div>
-    </div>
+        </div>
 
 <?php include('templates/footer.php'); ?> 

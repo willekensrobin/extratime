@@ -16,13 +16,12 @@ $games = $game->getGame();
     
 <div class="clearfix"></div>
    
-    <div class="content">
+    <div class="content top100">
 
-    <p class="h4 top100">Wedstrijden</p> 
 
     <?php while($game = $games->fetch(PDO::FETCH_ASSOC)): ?>
         <a href="timeline.php">
-        <div class="containerclub light">
+        <div class="containerclub">
             <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picture'] ?>"/ alt=""><br><p class="right"><?php echo $game['hometeam'];  ?></p></div>
             <div class="col-xs-2"><p class="right vs">VS</p></div>    
             <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""><p class="right"><?php echo $game['visitors']; ?></p></div>

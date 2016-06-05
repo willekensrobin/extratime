@@ -31,14 +31,27 @@ input{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.top10{
+        margin-top: 10px;
+
+}
+.top25{
+    margin-top: 50px;
+}
 .top50{
     margin-top: 50px;
 }
-.top100{
-    margin-top: 100px;
+.top75{
+    margin-top: 75px;
 }
 .top100{
     margin-top: 100px;
+}
+.top125{
+    margin-top: 125px;
+}
+.top150{
+    margin-top: 150px;
 }
 .centervertical{
     position: absolute;
@@ -105,14 +118,11 @@ nav{
     background-color: #eaeaea;
 }
 .logogroot{
-    background: url(../images/logogroot.png) no-repeat center center;
-    height: 90%;
-    display: block;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-size: contain;
+    height: 80%;
 }
-
+.logofull{
+    height: 100%;
+    padding-top: 35px
 }
 .container{
   min-height: 100%;
@@ -150,7 +160,18 @@ font-size: 0.8em;
     box-shadow: none;
     color: #000080;
 }
-.btn-default{
+.btn:active{
+    background-color: white;
+    border: 5px solid white;
+    color: #000080;
+}
+.btn:focus{
+    background-color: white;
+    border: 5px solid white;
+    color: #000080;
+}
+
+.btn-logsign{
     font-size: 1.4em;
     background: none;
     background-color: none;
@@ -162,6 +183,7 @@ font-size: 0.8em;
     padding-left: 1.5em;
     font-weight: bold;
     width: 250px;
+    color: white;
 }
 .btn-club{
     background: none;
@@ -178,7 +200,10 @@ font-size: 0.8em;
     padding-top: 10px;
 }
 
-
+.h5{
+    font-weight: 100;
+    font-size: 4em;
+}
 .containerclub{
     padding-right: 15px;
     padding-left: 15px;
@@ -186,7 +211,16 @@ font-size: 0.8em;
     margin-right: auto;
     margin-left: auto;
     height: 120px;
-    padding-top: 20px;
+    margin-bottom: -10px;
+}
+.containerclub2{
+    padding-right: 15px;
+    padding-left: 15px;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+    height: 120px;
+    margin-bottom: 25px;
 }
 .containericonen{
     
@@ -214,11 +248,13 @@ font-size: 0.8em;
     border: none;
     border-bottom: 2px solid white;
     color: white;
-    padding-top: 3em;
+    padding-top: 2em;
     padding-right: 1em;
     padding-left: 1em;
     padding-bottom: 1em;
     box-shadow: none;
+        font-weight: 100;
+    font-size: 1.3em;
 }
 .form-control::-webkit-input-placeholder {
    color: white;
@@ -374,6 +410,8 @@ a.knop:hover::before {
   
   height: 60px;
 width:  60px;
+        background: none;
+
     background-image: url(../images/yellow.svg);
 background-color: none;
     margin-top: 140px;
@@ -384,6 +422,8 @@ background-color: none;
   
   height:  60px;
 width:  60px;
+        background: none;
+
     background-image: url(../images/red.svg);
 background-color: none;
     margin-top: 140px;
@@ -405,6 +445,8 @@ background-color: none;
     border: none;  
     height: 60px;
     width:  60px;
+        background: none;
+
     background-image: url(../images/flag.svg);
     background-color: none;
     margin-top: 140px;
@@ -413,25 +455,28 @@ background-color: none;
 .scard-yellow {
     margin-top: 20px;
     border: none;  
-    height: 100px;
-    width:  100px;
-    background-image: url(../images/yellow.svg);
-    background-color: none;
+    height: 50px;
+    width:  50px;
+        background: none;
+
+    background: url(../images/yellow.svg) center center;
     bottom: 0px;
     font-weight: 100;
-        font-size: 2em;
+        font-size: 1.3em;
 
 }
 
 .scard-red {
     margin-top: 20px;
     border: none;  
-    height:  100px;
-    width:  100px;
-    background-image: url(../images/red.svg);
+    height:  50px;
+    width:  50px;
+        background: none;
+
+    background: url(../images/red.svg) center center;
     background-color: none;
     font-weight: 100;
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 
@@ -442,6 +487,8 @@ background-color: none;
   
   height: 60px;
 width:  60px;
+        background: none;
+
     background-image: url(../images/ballwhite.svg);
 background-color: none;
   border-radius: 10px;
@@ -454,8 +501,9 @@ background-color: none;
   
   height:  60px;
 width:  60px;
+        background: none;
+
     background-image: url(../images/flag.svg);
-background-color: none;
     margin-top: 40px;
 
 }
@@ -468,6 +516,14 @@ position: fixed;
 left: 50%;
 margin-left: -37.5%;
 }
+.bottom2{
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+position: fixed;
+
+}
 footer{
     text-align: center;
 }
@@ -479,6 +535,140 @@ footer{
     margin-left: 25px;
     margin-right: 25px;
 }
-input{
+.input{
     background: none;
+}
+.alert-info{
+    border-radius: 0;
+    background: #40d47e;
+    border: none;
+    border-top: 0px solid black;
+    color: white;
+    position: absolute;
+    top: -50px;
+    padding-top: 35px;
+    height: 100px;
+    border-color: transparent;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* left: 25%; */
+    width: 100%;
+    font-size: 1.4em;
+    opacity: 0.96;
+    font-weight: 100;
+}
+.alert{
+    border-radius: 0;
+    border: none;
+    border-top: 0px solid black;
+    color: white;
+    position: absolute;
+    top: -50px;
+    padding-top: 35px;
+    height: 100px;
+    border-color: transparent;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* left: 25%; */
+    width: 100%;
+    font-size: 1.4em;
+    opacity: 0.96;
+}
+.alert-danger{
+    border-radius: 0;
+    background: #e74c3c;
+    border: none;
+    border-top: 0px solid black;
+    color: white;
+    position: absolute;
+    top: -50px;
+    padding-top: 35px;
+    height: 100px;
+    border-color: transparent;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /* left: 25%; */
+    width: 100%;
+    font-size: 1.4em;
+    opacity: 0.96;
+    
+    font-weight: 100;
+}
+.opa70{
+    opacity: 0.9;
+}
+.halfs{
+    width: 50%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100px;
+    background-color: #fff;
+    border: none;
+    border-radius: none;
+    font-size: 1.4em;
+    font-weight: 100;
+    color:#06499f;
+    opacity: 0.9;
+}
+.borderrechts{
+            border-right: 1px solid rgba(0, 0, 0, .1);
+}
+.halfs:focus{
+    width: 50%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100px;
+    border: none;
+    border-radius: none;
+    opacity: 0.5;
+
+}
+.halfs:hover{
+    width: 50%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100px;
+    opacity: 0.5;
+    border: none;
+    border-radius: none;
+}
+.halfs:active{
+    width: 50%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100px;
+    opacity: 0.5;
+    border: none;
+    border-radius: none;
+}
+.noline{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.upload{
+    font-weight: 100;
+    font-size: 1.3em;
+}
+.noback{
+    background: none;
+    border: none;
 }

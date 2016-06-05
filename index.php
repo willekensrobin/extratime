@@ -15,11 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
-    <script type="text/javascript">
-			$(function() {
-				$('nav#menu').mmenu();
-			});
-    </script>
+
 
 
     <!--[if IE]>
@@ -30,22 +26,19 @@
 
 <body>
 
-<div id="page">
-    <div class="header">
-        <a href="#menu"></a>
-        <div class="logo"></div>
-    </div>
+
     
-<div class="content">
-    <div class="centervertical">
-    <button name="btn-login" class="btn btn-default "><a href="login.php">INLOGGEN</a></button><br><br>
-    <button name="btn-login" class="btn btn-default "><a href="signup.php">REGISTREREN</a></button><br><br>
-    </div>
+<div class="logogroot center">
+<img class="logofull" src="images/logogroot.png">    
 </div>
 
-</div>
 
-<?php include('templates/footer.php'); ?>	
+<div class="bottom2"> 
+<button name="btn-login" class="halfs borderrechts"><a href="login.php">INLOGGEN</a></button>
+<button name="btn-login" class="halfs"><a href="signup.php">REGISTREREN</a></button>
+</div>
+</body>
+</html>
 
 
 
