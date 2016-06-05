@@ -109,6 +109,17 @@ nav{
     height: 20px;
     margin-right: 20px;
 }
+.icon2 {
+    height: 15px;
+    margin-right: 20px;
+    margin-top: -4px;
+}
+.icon3 {
+    height: 30px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom:  50px;
+}
 .vs{
     font-size: 2em;
     margin-top: 22px;
@@ -530,6 +541,8 @@ footer{
 
 #madewithlove {
     text-align: center;
+    opacity: 0.5;
+
 }
 .marginleftright{
     margin-left: 25px;
@@ -607,17 +620,33 @@ footer{
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-    height: 100px;
-    background-color: #fff;
+    height: 50px;
+    background-color: #00a6e2;
     border: none;
     border-radius: none;
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: 100;
-    color:#06499f;
-    opacity: 0.9;
+    color:#fff;
+}
+.fulls{
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 50px;
+    background-color: #4267b2;
+    border: none;
+    border-radius: none;
+    font-size: 1em;
+    font-weight: 100;
+    color:#fff;  
 }
 .borderrechts{
             border-right: 1px solid rgba(0, 0, 0, .1);
+        background-color: #00a6e2;
+
 }
 .halfs:focus{
     width: 50%;
@@ -626,7 +655,6 @@ footer{
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-    height: 100px;
     border: none;
     border-radius: none;
     opacity: 0.5;
@@ -639,7 +667,6 @@ footer{
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-    height: 100px;
     opacity: 0.5;
     border: none;
     border-radius: none;
@@ -651,7 +678,6 @@ footer{
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-    height: 100px;
     opacity: 0.5;
     border: none;
     border-radius: none;
@@ -667,6 +693,9 @@ footer{
 .upload{
     font-weight: 100;
     font-size: 1.3em;
+}
+.upload2{
+    font-size: 1em;
 }
 .noback{
     background: none;

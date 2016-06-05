@@ -33,7 +33,8 @@
 </div>
 
 
-<div class="bottom2"> 
+<div class="bottom2">
+<button name="btn-login" class="fulls"><a href="login.php"><img class="icon2" src="images/facebook.svg">AANMELDEN MET FACEBOOK</a></button>
 <button name="btn-login" class="halfs borderrechts"><a href="login.php">INLOGGEN</a></button>
 <button name="btn-login" class="halfs"><a href="signup.php">REGISTREREN</a></button>
 </div>

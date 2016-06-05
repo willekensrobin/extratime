@@ -31,8 +31,12 @@ if(!empty($_POST['delBtn']))
             <div class="col-xs-2"><p class="right vs">VS</p></div>    
             <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""><p class="right"><?php echo $game['visitors']; ?></p></div>
             </a>
-            <a href="editgame.php">Aanpassen</a>
-            <input type="submit" name="delBtn" class="noback" id="" value="Verwijderen"/>
+             <div class="col-xs-3"></div>
+            <div class="col-xs-2"><a href="editgame.php"><img class="icon3" src="images/settings.svg"></a></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2"><input type="submit" name="delBtn" class="noback noline" id="" value=""/>
+            <label for="file"><img class="icon3" src="images/garbage.svg"></label></div>
+            <div class="col-xs-3"></div>
         </div>
         <?php endwhile; ?>  
         
