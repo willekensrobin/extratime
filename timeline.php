@@ -75,11 +75,11 @@ $('.btnBack').click(function(){
             <a href="#"><img class="knopwhist"src="images/whis.svg"></a>
     </div>
     
-    <div class="container center">  
+    <div class="container center top50">  
          <div class="row">
-            <div class="col-xs-5"> <img class="logoklein" src="uploads/<?php echo $game['picture'] ?>"/ alt=""></div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""></div>
+            <div class="col-xs-5"><img class="logoklein" src="uploads/and.png"/ alt=""><br></div>
+            <div class="col-xs-2"><p class="right vs">VS</p></div>    
+            <div class="col-xs-5"><img class="logoklein" src="uploads/brugge.png" alt=""></div>
         </div>
         
         <div class="row">
@@ -100,12 +100,10 @@ $('.btnBack').click(function(){
     
     <a href="#" class="btnBack">X</a>
     
-    <div class="container center">
-        <div class=" top150">
-            <div class="col-xs-5"> <img class="logoklein" src="uploads/<?php echo $game['picture'] ?>"/ alt=""></div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-5"><img class="logoklein" src="uploads/<?php echo $game['picturetwo'] ?>"/ alt=""></div>
-        </div>
+    <div class="container center top150">
+            <div class="col-xs-5"><img class="logoklein" src="uploads/and.png"/ alt=""><br></div>
+            <div class="col-xs-2"><p class="right vs">VS</p></div>    
+            <div class="col-xs-5"><img class="logoklein" src="uploads/brugge.png" alt=""></div>
             <form action="" method="post">
                 <div class="col-xs-5 "><input type="submit" value="" name="red1" id="red1" class="scard-red" /><input type="submit" value="" name="yellow1" id="yellow1" class="scard-yellow" />  </div>
                 <div class="col-xs-2"></div>

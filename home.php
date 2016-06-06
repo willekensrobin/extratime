@@ -16,8 +16,8 @@ $games = $game->getGame();
     
 <div class="clearfix"></div>
    
-    <div class="content top100">
-
+    <div class="content top100 ">
+<div class="stripe">
 
     <?php while($game = $games->fetch(PDO::FETCH_ASSOC)): ?>
         <a href="timeline.php">
@@ -28,12 +28,11 @@ $games = $game->getGame();
         </div>
         </a>
         <?php endwhile; ?>  
-
+</div>
     </div>   
 </div>
 
-<?php include('templates/footer.php'); ?>
-			
+<?php include('templates/footer.php'); ?>			
 
 
 
