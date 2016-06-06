@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+<head>    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,9 +12,9 @@
     <link type="text/css" rel="stylesheet" href="css/demo.css" />
     <link type="text/css" rel="stylesheet" href="dist/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" href="css/style.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
     <script type="text/javascript" src="dist/js/jquery.mmenu.all.min.js"></script>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript">
 			$(function() {
@@ -32,11 +32,17 @@
 <body>
 
 <nav id="menu">
-    <ul>
-        <div class="center space50 bigfont"><li><a href="profile.php">Hallo <?php echo $userRow['username']; ?></a></li></div>
+    <ul><br>
+                <div class="center bigfont"><li><a href="profile.php">Hallo <?php echo $userRow['username']; ?></a></li></div>
+
+        <div class="circular"></div>
+
         <li><a href="admin.php" class="dark"><img class="iconmenu" src="images/ball.svg">Wedstrijden</a></li>
         <li><a href="profile.php"><img class="iconmenu" src="images/avatar.svg">Profiel</a></li>
-        <li><a href="userdata.php" class="dark"><img class="iconmenu" src="images/ball.svg">Mijn wedstrijden</a></li>
         <li><a href="logout.php?logout=true"><img class="iconmenu" src="images/logout.svg">Uitloggen</a></li>
+        <div class="bottom"> 
+    <h1 id="madewithlove">Made with &hearts;  in Mechelen</h1>
+</div>
     </ul>
+
 </nav>

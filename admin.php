@@ -12,7 +12,7 @@ if(!empty($_POST['delBtn']))
     $game-redirect('admin.php');
 }
 
-?><?php include('templates/header.php');?>
+?><?php include('templates/adminheader.php');?>
 
 <div id="page">
     <div class="header">
@@ -42,7 +42,7 @@ if(!empty($_POST['delBtn']))
         
         <div class="center top50">
             <a class="btn btn-logsign" href="addgame.php">
-            AANMELDEN
+            + WEDSTRIJD
             </a>
         </div>  
     </div>   
