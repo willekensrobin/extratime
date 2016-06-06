@@ -8,6 +8,9 @@ if(!empty($_POST))
     
     $temporary2 = explode(".", $_FILES["team-logo2"]["name"]);
     $file_extension2 = end($temporary2);
+    
+    $temporary3 = explode(".", $_FILES["picture"]["name"]);
+    $file_extension3 = end($temporary3);
 
     if ((($_FILES["team-logo1"]["type"] == "image/png") || ($_FILES["team-logo1"]["type"] == "image/jpg") || ($_FILES["team-logo1"]["type"] == "image/jpeg" && $_FILES["team-logo2"]["type"] == "image/png") || ($_FILES["team-logo2"]["type"] == "image/jpg") || ($_FILES["team-logo2"]["type"] == "image/jpeg")
     ) && ($_FILES["team-logo1"]["size"] < 5000000) && ($_FILES["team-logo2"]["size"] < 5000000)

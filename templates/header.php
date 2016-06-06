@@ -35,7 +35,7 @@
     <ul><br>
                 <div class="center bigfont"><li><a href="profile.php">Hallo <?php echo $userRow['username']; ?></a></li></div>
 
-        <div class="circular"></div>
+        <div><img class="circular" src="uploads/<?php echo $userRow['picture']; ?>"/ alt=""></div>
 
         <li><a href="home.php" class="dark"><img class="iconmenu" src="images/ball.svg">Wedstrijden</a></li>
         <li><a href="profile.php"><img class="iconmenu" src="images/avatar.svg">Profiel</a></li>

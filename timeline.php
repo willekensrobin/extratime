@@ -37,7 +37,16 @@ include('classes/userauth.class.php');
 //    }
 //}
 ?>
-<?php include('templates/adminheader.php');?>
+<?php 
+if($userRow['type'] == 1)
+{
+    include('templates/adminheader.php');
+}
+else if($userRow['type'] == 0)
+{
+    include('templates/header.php');
+}
+?>
 
 <script type="text/javascript">
 
@@ -105,6 +114,8 @@ $('#yellow-card2').click( function() {
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>
+    
+    <button onclick="history.go(-1);">Terug</button>
     
     <div class="content">
         

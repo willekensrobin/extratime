@@ -4,7 +4,6 @@ include_once('db.class.php');
 
 class User
 {	
-
 	private $conn;
     private $m_sUsername;
     private $m_sFirstname;
@@ -13,6 +12,7 @@ class User
     private $m_sPassword;
     private $m_iType;
     private $m_iCode;
+    private $m_fImage;
     
     public function __set($p_sProperty, $p_vValue) {
 
@@ -40,6 +40,10 @@ class User
             
             case 'Code':
 				$this->m_iCode = $p_vValue;
+			break;
+                
+            case 'Picture':
+				$this->m_fImage = $p_vValue;
 			break;
 		}
 }
@@ -69,6 +73,10 @@ class User
 
 			case 'Code':
 			return $this->m_iCode;
+			break;
+                
+            case 'Picture':
+			return $this->m_fImage;
 			break;
 				
 		}

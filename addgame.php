@@ -22,6 +22,8 @@ if(!empty($_POST))
         <div class="logo"></div>
     </div>
     
+    <button onclick="history.go(-1);">Terug</button>
+    
     <div class="content">
         <form class="addgame-form top75" method="post" action="" enctype="multipart/form-data" id="addgame-form">
       

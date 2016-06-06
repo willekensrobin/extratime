@@ -14,9 +14,12 @@ $games = $game->getGame();
         <div class="logo"></div>
     </div>
     
+    <button onclick="history.go(-1);">Terug</button>
+    
 <div class="clearfix"></div>
    
     <div class="content top100 ">
+    
 <div class="stripe">
 
     <?php while($game = $games->fetch(PDO::FETCH_ASSOC)): ?>

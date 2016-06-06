@@ -106,7 +106,11 @@ class Game
             $hometeam = $this->Team1;
             $visitors = $this->Team2;
             $picture = $this->Image1;
-            $picturetwo = $this->Image2;  
+            $picturetwo = $this->Image2;
+            
+            $statement1 = $this->conn->prepare("SELECT id FROM db_games");
+			$gameRow=$statement1->fetch(PDO::FETCH_ASSOC);
+            $id = $gameRow['id'];
             
             $statement = $this->conn->prepare("UPDATE db_games SET hometeam=:hometeam, visitors=:visitors, picture=:picture, picturetwo=:picturetwo WHERE id=". $id .";");
 			$statement->bindparam(":hometeam", $hometeam);

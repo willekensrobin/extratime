@@ -7,13 +7,13 @@ $game = new Game();
 if(!empty($_POST))
 {
     
-    //$game->Team1 = $_POST['team-1'];
-    //$game->Team2 = $_POST['team-2'];
-    //$game->Image1 = strip_tags(($_FILES['team-logo1']["name"]));
-    //$game->Image2 = strip_tags(($_FILES['team-logo2']["name"]));
+    $game->Team1 = $_POST['team-1'];
+    $game->Team2 = $_POST['team-2'];
+    $game->Image1 = strip_tags(($_FILES['team-logo1']["name"]));
+    $game->Image2 = strip_tags(($_FILES['team-logo2']["name"]));
         
-    //$game->editGame();
-    //$game->redirect('admin.php');
+    $game->editGame();
+    $game->redirect('admin.php');
            
 }
 ?><?php include('templates/adminheader.php') ?>
@@ -22,6 +22,8 @@ if(!empty($_POST))
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>
+    
+    <button onclick="history.go(-1);">Terug</button>
     
     <div class="content">
         <form class="addgame-form top100" method="post" action="" enctype="multipart/form-data" id="addgame-form">
