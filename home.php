@@ -10,11 +10,11 @@ $games = $game->getGame();
 
 <div id="page">
     <div class="header">
+
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>
     
-    <button onclick="history.go(-1);">Terug</button>
     
 <div class="clearfix"></div>
    

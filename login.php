@@ -60,7 +60,6 @@ if(!empty($_POST))
 
 <div id="page">
     <div class="header">
-        <a href="#menu"></a>
         <div class="logo"></div>
     </div>
     <div class="content">

@@ -111,6 +111,8 @@ $('#yellow-card2').click( function() {
 <div id="page">
    
     <div class="header">
+            <img class="back" src="images/back.svg" alt=""onclick="history.go(-1);">
+
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>
@@ -144,6 +146,8 @@ $('#yellow-card2').click( function() {
 <div id="page2">
    
     <div class="header">
+            <img class="back" src="images/back.svg" alt=""onclick="history.go(-1);">
+
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>

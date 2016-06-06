@@ -19,6 +19,9 @@ if(!empty($_POST))
 ?><?php include('templates/adminheader.php') ?>
 <div id="page">
     <div class="header">
+        
+            <img class="back" src="images/back.svg" alt=""onclick="history.go(-1);">
+
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>

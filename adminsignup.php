@@ -107,13 +107,11 @@ if(!empty($_POST))
 
 <div id="page">
     <div class="header">
-        <a href="#menu"></a>
         <div class="logo"></div>
     </div>
     
 <div class="content">
-</div>
-        <form method="post" class="form-signin center">
+        <form method="post" class="form-signin center top25">
             <?php
 			if(isset($error))
 			{
@@ -154,7 +152,7 @@ if(!empty($_POST))
             	<input type="password" class="form-control" name="admincode" placeholder="Code" />
             </div>
             
-            <a href="signup.php">Ik ben geen admin gebruiker</a>
+            <a href="signup.php">Ik ben geen admin gebruiker</a><br><br>
             
             <div class="clearfix"></div>
             <div class="form-group center">

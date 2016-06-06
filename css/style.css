@@ -723,3 +723,15 @@ background-image: linear-gradient(transparent 50%, rgba(255,255,255,.1) 50%);
 background-size: 218px 218px;
 background-position: center -10px;
 }
+.back{
+   
+    margin-top: 25px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+  
+
+}

@@ -34,9 +34,9 @@
 
 
 <div class="bottom2">
-<button name="btn-login" class="fulls"><a href="login.php"><img class="icon2" src="images/facebook.svg">AANMELDEN MET FACEBOOK</a></button>
-<button name="btn-login" class="halfs borderrechts"><a href="login.php">INLOGGEN</a></button>
-<button name="btn-login" class="halfs"><a href="signup.php">REGISTREREN</a></button>
+<a href="login.php"><button name="btn-login" class="fulls"><img class="icon2" src="images/facebook.svg"> AANMELDEN MET FACEBOOK</button></a>
+<a href="login.php"><button name="btn-login" class="halfs borderrechts">INLOGGEN</button></a>
+<a href="signup.php"><button name="btn-login" class="halfs">REGISTREREN</button></a>
 </div>
 </body>
 </html>
