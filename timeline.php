@@ -116,9 +116,7 @@ $('#yellow-card2').click( function() {
         <a href="#menu"></a>
         <div class="logo"></div>
     </div>
-    
-    <button onclick="history.go(-1);">Terug</button>
-    
+        
     <div class="content">
         
 

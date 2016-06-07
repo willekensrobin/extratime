@@ -37,20 +37,19 @@ else if($userRow['type'] == 0)
         <div class="logo"></div>
     </div>
     
-    <button onclick="history.go(-1);">Terug</button>
     
     <div class="content"><br><br>
         <div><img class="circular" src="uploads/<?php echo $userRow['picture']; ?>"/ alt=""></div>
         
         <form action="" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam" value="<?php echo $userRow['username']; ?>" />
+                <input type="text" class="form-control" name="username" placeholder="<?php echo $userRow['username']; ?>" value="<?php echo $userRow['username']; ?>" />
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="email" placeholder="Email" value="<?php echo $userRow['email']; ?>" />
+                <input type="text" class="form-control" name="email" placeholder="<?php echo $userRow['email']; ?>" value="<?php echo $userRow['email']; ?>" />
             </div>
             <div class="form-group">
-            	<input type="password" class="form-control" name="password" placeholder="Wijzig wachtwoord"  />
+            	<input type="password" class="form-control" name="password" placeholder="wijzig password" value="<?php echo $userRow['email']; ?>"  />
             </div>
                        
             <div class="form-group">
