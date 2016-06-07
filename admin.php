@@ -20,8 +20,6 @@ if(!empty($_POST['delBtn']))
         <div class="logo"></div>
     </div>
     
-    <button onclick="history.go(-1);">Terug</button>    
-    
 <div class="clearfix"></div>
    
     <div class="content top75">
